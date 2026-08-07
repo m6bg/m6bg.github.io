@@ -56,16 +56,11 @@ a:focus-visible {
   padding-block: 1.5rem;
 }
 
-.site-logo {
-  display: inline-block;
-  width: clamp(4rem, 12vw, 5.5rem);
-  line-height: 0;
-}
-
-.site-logo img {
-  display: block;
-  width: 100%;
-  height: auto;
+.site-nav a {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .site-main {
