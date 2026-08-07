@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="{{ '/' | relative_url }}">Mark Pasacreta</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; {{ 'now' | date: '%Y' }} Mark Pasacreta</p>
+    </footer>
+  </body>
+</html>
