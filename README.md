@@ -1,4 +1,4 @@
-# markpasacreta.github.io
+# m6bg.github.io
 
 A minimalist Jekyll portfolio for GitHub Pages. The site uses a custom layout and one stylesheet—there is no theme, JavaScript, or separate build step.
 
