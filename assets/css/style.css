@@ -5,8 +5,8 @@
   --accent: #2c6e8f;
   --surface: rgba(255, 255, 255, 0.7);
   --border: rgba(22, 36, 46, 0.18);
-  --display: "Fugaz One", sans-serif;
-  --body: "Work Sans", sans-serif;
+  --display: "Unica One", sans-serif;
+  --body: "Crimson Text", serif;
 }
 
 *,
@@ -19,7 +19,7 @@ html {
   color: var(--ink);
   background: var(--background);
   font-family: var(--body);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.65;
   -webkit-text-size-adjust: 100%;
 }
@@ -58,7 +58,8 @@ a:focus-visible {
 
 .site-nav a {
   color: var(--ink);
-  font-size: 0.9rem;
+  font-family: var(--display);
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -85,7 +86,7 @@ h3 {
   font-family: var(--display);
   font-weight: 400;
   line-height: 1.15;
-  letter-spacing: -0.015em;
+  letter-spacing: 0.015em;
 }
 
 h1 {
@@ -170,14 +171,14 @@ table {
 
 .card-subtitle {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .card-link {
   margin-top: auto;
   color: var(--accent);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 

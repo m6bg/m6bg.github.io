@@ -1,10 +1,10 @@
 ---
-title: Supercapacitor Power Buffer
+title: Supercapacitor Buffer
 subtitle: A bidirectional power stage for smoothing pulsed DC loads
 date: 2025-03-15
 stack: [Altium, LTspice, STM32]
 summary: A compact supercapacitor buffer that supplies short current peaks while keeping the upstream rail stable. Designed, simulated, assembled, and characterized from transient response through thermal performance.
-order: 1
+order: 3
 ---
 
 ## Overview
