@@ -4,10 +4,16 @@ layout: default
 <main class="page-col project-col">
   <header class="section-header">
     <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="subtitle">{{ page.subtitle }}</p>
+    {% endif %}
     {% if page.dates %}
     <p class="dates">{{ page.dates }}</p>
     {% elsif page.date %}
     <p class="dates">{{ page.date | date: '%B %Y' }}</p>
+    {% endif %}
+    {% if page.stack %}
+    <p class="stack">{{ page.stack | join: ' &middot; ' }}</p>
     {% endif %}
   </header>
   <div class="writing">

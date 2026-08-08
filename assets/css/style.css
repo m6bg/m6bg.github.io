@@ -1,25 +1,15 @@
 /* Design tokens — Mark Pasacreta design system */
 :root {
-  /* colors (hex fallbacks first, oklch overrides after) */
-  --green-50: #f2f7ed;
-  --green-100: #e9f2e0;
-  --green-200: #dcebca;
+  /* colors */
+  --green-50: #e8f3dd;
+  --green-100: #dcecca;
+  --green-200: #cbe2b2;
   --black: #171717;
   --white: #ffffff;
   --gray-100: #ededed;
   --gray-300: #c7c7c7;
   --gray-500: #838383;
   --gray-700: #4f4f4f;
-
-  --green-50: oklch(97.5% 0.018 140);
-  --green-100: oklch(95.5% 0.03 140);
-  --green-200: oklch(91% 0.045 140);
-  --black: oklch(18% 0 0);
-  --white: oklch(100% 0 0);
-  --gray-100: oklch(94% 0 0);
-  --gray-300: oklch(82% 0 0);
-  --gray-500: oklch(58% 0 0);
-  --gray-700: oklch(38% 0 0);
 
   --surface-bg: var(--green-50);
   --surface-bg-raised: var(--green-100);
@@ -67,6 +57,20 @@
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --duration-fast: 120ms;
   --duration-normal: 220ms;
+}
+
+@supports (color: oklch(0% 0 0)) {
+  :root {
+    --green-50: oklch(95.5% 0.04 138);
+    --green-100: oklch(93% 0.055 138);
+    --green-200: oklch(89.5% 0.075 138);
+    --black: oklch(18% 0 0);
+    --white: oklch(100% 0 0);
+    --gray-100: oklch(94% 0 0);
+    --gray-300: oklch(82% 0 0);
+    --gray-500: oklch(58% 0 0);
+    --gray-700: oklch(38% 0 0);
+  }
 }
 
 *,
@@ -152,10 +156,11 @@ a {
 
 .forward-link .arrow {
   display: inline-block;
-  transition: transform var(--duration-normal) var(--ease-standard);
+  transition: transform var(--duration-fast) var(--ease-standard);
 }
 
-.forward-link:hover .arrow {
+.forward-link:hover .arrow,
+.forward-link:focus-visible .arrow {
   transform: translateX(4px);
 }
 
@@ -282,7 +287,20 @@ a {
   color: var(--text-primary);
 }
 
+.section-header .subtitle {
+  margin: 0;
+  font-size: var(--text-body);
+  line-height: var(--leading-snug);
+  color: var(--text-secondary);
+}
+
 .section-header .dates {
+  margin: 0;
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+}
+
+.section-header .stack {
   margin: 0;
   font-size: var(--text-small);
   color: var(--text-secondary);
@@ -387,6 +405,14 @@ a {
 .writing pre code {
   padding: 0;
   background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @media (max-width: 560px) {
