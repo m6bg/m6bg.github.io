@@ -14,6 +14,8 @@ defaults:
       type: projects
     values:
       layout: project
+      back_url: /portfolio/
 
 exclude:
   - README.md
+  - "Portfolio site shell.zip"

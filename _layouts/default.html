@@ -4,18 +4,11 @@
     {% include head.html %}
   </head>
   <body>
-    <header class="site-header">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="{{ '/' | relative_url }}">Mark Pasacreta</a>
-      </nav>
-    </header>
-
-    <main class="site-main">
-      {{ content }}
-    </main>
-
-    <footer class="site-footer">
-      <p>&copy; {{ 'now' | date: '%Y' }} Mark Pasacreta</p>
-    </footer>
+    {% unless page.hide_backmark %}
+      <div class="backmark-wrap">
+        <a class="back-mark" href="{{ page.back_url | default: '/' | relative_url }}" aria-label="back">m</a>
+      </div>
+    {% endunless %}
+    {{ content }}
   </body>
 </html>

@@ -1,18 +1,11 @@
 ---
 layout: default
 ---
-<section class="intro" aria-labelledby="page-title">
-  <h1 id="page-title">Mark Pasacreta</h1>
-  <p class="identity">{{ page.identity }}</p>
-  <p class="about">{{ page.about }}</p>
-</section>
-
-<section class="projects" aria-labelledby="projects-title">
-  <h2 id="projects-title">Selected projects</h2>
-  <div class="project-grid">
-    {% assign sorted_projects = site.projects | sort: 'order' %}
-    {% for project in sorted_projects %}
-      {% include project-card.html project=project %}
-    {% endfor %}
-  </div>
-</section>
+<main class="landing">
+  <h1 class="landing-name">Mark Pasacreta</h1>
+  <nav class="landing-nav" aria-label="Primary navigation">
+    <a class="forward-link" href="{{ '/experience/' | relative_url }}">experience <span class="arrow" aria-hidden="true">&rarr;</span></a>
+    <a class="forward-link" href="{{ '/portfolio/' | relative_url }}">portfolio <span class="arrow" aria-hidden="true">&rarr;</span></a>
+    <a class="forward-link" href="{{ '/hobbies/' | relative_url }}">hobbies <span class="arrow" aria-hidden="true">&rarr;</span></a>
+  </nav>
+</main>

@@ -1,0 +1,11 @@
+# Experience entries, newest first. Each entry: role, org, dates, description.
+# This file is the only thing to edit to update the experience page.
+- role: Avionics Director
+  org: Michigan Aeronautical Science Association
+  dates: present
+  description: Leading avionics development across the team's rocket programs.
+
+- role: Computer Engineering Student
+  org: University of Michigan
+  dates: present
+  description: Coursework and projects across embedded systems, digital logic, and hardware design.
