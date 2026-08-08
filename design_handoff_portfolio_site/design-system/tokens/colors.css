@@ -1,0 +1,20 @@
+:root{
+--green-50:oklch(97.5% 0.018 140);
+--green-100:oklch(95.5% 0.03 140);
+--green-200:oklch(91% 0.045 140);
+--black:oklch(18% 0 0);
+--white:oklch(100% 0 0);
+--gray-100:oklch(94% 0 0);
+--gray-300:oklch(82% 0 0);
+--gray-500:oklch(58% 0 0);
+--gray-700:oklch(38% 0 0);
+
+--surface-bg:var(--green-50);
+--surface-bg-raised:var(--green-100);
+--surface-line:var(--green-200);
+--text-primary:var(--black);
+--text-secondary:var(--gray-500);
+--text-tertiary:var(--gray-300);
+--text-on-dark:var(--white);
+--border-hairline:var(--gray-100);
+}

@@ -2,10 +2,15 @@
 # This file is the only thing to edit to update the experience page.
 - role: Avionics Director
   org: Michigan Aeronautical Science Association
-  dates: present
-  description: Leading avionics development across the team's rocket programs.
+  dates: Apr 2026 - Present
+  description: Leading rocket avionics and ground support equipment design, development, and integration
 
-- role: Computer Engineering Student
-  org: University of Michigan
-  dates: present
-  description: Coursework and projects across embedded systems, digital logic, and hardware design.
+- role: Software Engineering Intern
+  org: newcleo
+  dates: May 2026 - Jul 2026
+  description: Designed financial tools for business development team of European SMR-firm
+
+- role: Chapter Head
+  org: The Andrew McDonough B+ Foundation
+  dates: Dec 2021 - Aug 2025
+  description: Raised $100,000 for families of children with cancer
