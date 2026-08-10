@@ -31,6 +31,7 @@
   --green-50: #e8f3dd;
   --green-100: #dcecca;
   --green-200: #cbe2b2;
+  --green-300: #b3d18f;
   --black: #171717;
   --white: #ffffff;
   --gray-100: #ededed;
@@ -38,7 +39,7 @@
   --gray-500: #838383;
   --gray-700: #4f4f4f;
 
-  --surface-bg: var(--green-50);
+  --surface-bg: var(--green-300);
   --surface-bg-raised: var(--green-100);
   --surface-line: var(--green-200);
   --text-primary: var(--black);
@@ -87,11 +88,24 @@
   --duration-normal: 220ms;
 }
 
+/* Derive surface-dependent tokens from the active background so the
+   paint toggle recolors raised surfaces, hairlines, and secondary text
+   together. Older browsers keep the static values above. */
+@supports (color: color-mix(in oklab, red, white)) {
+  :root {
+    --surface-bg-raised: color-mix(in oklab, var(--surface-bg) 62%, white);
+    --surface-line: color-mix(in oklab, var(--surface-bg) 78%, black);
+    --text-secondary: color-mix(in oklab, var(--surface-bg) 32%, black);
+    --text-tertiary: color-mix(in oklab, var(--surface-bg) 45%, black);
+  }
+}
+
 @supports (color: oklch(0% 0 0)) {
   :root {
     --green-50: oklch(95.5% 0.04 138);
     --green-100: oklch(93% 0.055 138);
     --green-200: oklch(89.5% 0.075 138);
+    --green-300: oklch(83% 0.1 133);
     --black: oklch(18% 0 0);
     --white: oklch(100% 0 0);
     --gray-100: oklch(94% 0 0);
@@ -141,6 +155,30 @@ a {
 
 .back-mark:hover {
   opacity: 0.55;
+}
+
+/* Paint toggle — paintbrush, always pinned top-right */
+.paint-toggle {
+  position: fixed;
+  top: 28px;
+  right: 44px;
+  z-index: 10;
+  padding: 8px;
+  border: 0;
+  background: none;
+  line-height: 0;
+  cursor: pointer;
+  transition: opacity var(--duration-fast) var(--ease-standard);
+}
+
+.paint-toggle:hover {
+  opacity: 0.55;
+}
+
+.paint-toggle img {
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 /* Landing */
@@ -472,6 +510,11 @@ a {
 @media (max-width: 560px) {
   .backmark-wrap {
     padding: 24px;
+  }
+
+  .paint-toggle {
+    top: 20px;
+    right: 20px;
   }
 
   .landing {

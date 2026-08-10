@@ -9,6 +9,20 @@
         <a class="back-mark" href="{{ page.back_url | default: '/' | relative_url }}" aria-label="back">m</a>
       </div>
     {% endunless %}
+    <button class="paint-toggle" type="button" aria-label="Change background color">
+      <img src="{{ '/figs/paintbrush.svg' | relative_url }}" alt="" width="20" height="20">
+    </button>
     {{ content }}
+    <script>
+      (function () {
+        var colors = ["#9a9d56", "#dedec9", "#96af0f", "#c47a5c", "#dba56a"];
+        var current = null;
+        document.querySelector(".paint-toggle").addEventListener("click", function () {
+          var choices = colors.filter(function (c) { return c !== current; });
+          current = choices[Math.floor(Math.random() * choices.length)];
+          document.documentElement.style.setProperty("--surface-bg", current);
+        });
+      })();
+    </script>
   </body>
 </html>
