@@ -1,14 +1,16 @@
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/source-sans-pro-bold.ttf") format("truetype");
+  src: url("../fonts/source-sans-pro-bold.woff2") format("woff2"),
+    url("../fonts/source-sans-pro-bold.ttf") format("truetype");
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600 700;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Alegreya";
-  src: url("../fonts/alegreya-regular.ttf") format("truetype");
+  src: url("../fonts/alegreya-regular.woff2") format("woff2"),
+    url("../fonts/alegreya-regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -16,7 +18,8 @@
 
 @font-face {
   font-family: "Alegreya";
-  src: url("../fonts/alegreya-italic.ttf") format("truetype");
+  src: url("../fonts/alegreya-italic.woff2") format("woff2"),
+    url("../fonts/alegreya-italic.ttf") format("truetype");
   font-style: italic;
   font-weight: 400;
   font-display: swap;
@@ -128,7 +131,7 @@ a {
 
 .back-mark {
   font-family: var(--font-display);
-  font-weight: var(--weight-semibold);
+  font-weight: var(--weight-bold);
   font-size: 1.125rem;
   color: var(--text-primary);
   text-decoration: none;
@@ -225,7 +228,7 @@ a {
   margin: 0;
   font-family: var(--font-display);
   font-size: var(--text-h2);
-  font-weight: var(--weight-semibold);
+  font-weight: var(--weight-bold);
   color: var(--text-primary);
 }
 
@@ -381,7 +384,7 @@ a {
   margin: 36px 0 12px;
   font-family: var(--font-display);
   font-size: var(--text-h2);
-  font-weight: var(--weight-semibold);
+  font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-normal);
   color: var(--text-primary);
 }
@@ -434,7 +437,7 @@ a {
 
 .writing th {
   font-family: var(--font-display);
-  font-weight: var(--weight-semibold);
+  font-weight: var(--weight-bold);
 }
 
 .writing code {
