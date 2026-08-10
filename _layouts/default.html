@@ -17,10 +17,16 @@
       (function () {
         var colors = ["#9a9d56", "#dedec9", "#96af0f", "#c47a5c", "#dba56a"];
         var current = null;
+        try {
+          current = localStorage.getItem("surface-bg");
+        } catch (e) {}
         document.querySelector(".paint-toggle").addEventListener("click", function () {
           var choices = colors.filter(function (c) { return c !== current; });
           current = choices[Math.floor(Math.random() * choices.length)];
           document.documentElement.style.setProperty("--surface-bg", current);
+          try {
+            localStorage.setItem("surface-bg", current);
+          } catch (e) {}
         });
       })();
     </script>

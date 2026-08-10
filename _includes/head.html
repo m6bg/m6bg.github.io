@@ -9,3 +9,13 @@
 <link rel="preload" href="{{ '/assets/fonts/source-sans-pro-bold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ '/assets/fonts/alegreya-regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/css/style.css?v=4' | relative_url }}">
+<script>
+  (function () {
+    try {
+      var c = localStorage.getItem("surface-bg");
+      if (/^#[0-9a-f]{6}$/i.test(c)) {
+        document.documentElement.style.setProperty("--surface-bg", c);
+      }
+    } catch (e) {}
+  })();
+</script>
