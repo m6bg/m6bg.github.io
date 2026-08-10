@@ -7,14 +7,20 @@ permalink: /experience/
   <h1 class="page-title">experience</h1>
   {% for entry in site.data.experience %}
   <section class="experience-entry">
-    <div class="experience-top">
-      <h2 class="experience-role">{{ entry.role }}</h2>
-      <span class="experience-dates">{{ entry.dates }}</span>
+    <h2 class="experience-org">{{ entry.org }}</h2>
+    <div class="experience-roles">
+      {% for role in entry.roles %}
+      <div class="experience-role-entry">
+        <div class="experience-top">
+          <h3 class="experience-role">{{ role.title }}</h3>
+          <span class="experience-dates">{{ role.dates }}</span>
+        </div>
+        {% if role.description and role.description != "" %}
+        <p class="experience-description">{{ role.description }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
-    <p class="experience-org">{{ entry.org }}</p>
-    {% if entry.description and entry.description != "" %}
-    <p class="experience-description">{{ entry.description }}</p>
-    {% endif %}
   </section>
   {% endfor %}
 </main>

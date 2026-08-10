@@ -189,7 +189,28 @@ a {
 .experience-entry {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+}
+
+.experience-org {
+  margin: 0;
+  font-size: var(--text-h2);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.experience-roles {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.experience-role-entry {
+  display: flex;
+  flex-direction: column;
   gap: 6px;
+  padding-left: 16px;
+  border-left: 1px solid var(--text-secondary);
 }
 
 .experience-top {
@@ -201,8 +222,8 @@ a {
 
 .experience-role {
   margin: 0;
-  font-size: var(--text-h2);
-  font-weight: var(--weight-semibold);
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
   color: var(--text-primary);
 }
 
@@ -210,12 +231,6 @@ a {
   font-size: var(--text-small);
   color: var(--text-secondary);
   white-space: nowrap;
-}
-
-.experience-org {
-  margin: 0;
-  font-size: var(--text-body);
-  color: var(--text-secondary);
 }
 
 .experience-description {
