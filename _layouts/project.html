@@ -7,6 +7,12 @@ layout: default
     {% if page.subtitle %}
     <p class="subtitle">{{ page.subtitle }}</p>
     {% endif %}
+    {% if page.role or page.org %}
+    <p class="dates">{{ page.role }}{% if page.role and page.org %} &middot; {% endif %}{{ page.org }}</p>
+    {% endif %}
+    {% if page.program %}
+    <p class="dates">{{ page.program }}</p>
+    {% endif %}
     {% if page.dates %}
     <p class="dates">{{ page.dates }}</p>
     {% elsif page.date %}
