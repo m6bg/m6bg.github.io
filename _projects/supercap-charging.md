@@ -28,10 +28,10 @@ The sizing came out somewhere unintuitive. Pulling 1.4 A for 8 ms out of roughly
 
 ## *results and improvements*
 
-I wrote the hardware qualification protocol for the board: random vibration at 6.8 Grms and thermal cycling across the operating range. It passed both, and it passed functional tests through integration and pre-flight. **[CONFIRM from the SOP: vibration axes and duration, thermal range and cycle count.]**
+I wrote the hardware qualification protocol for the board. Random vibration ran at 6.8 Grms for 5 minutes on each of three orthogonal axes, with a 20–2000 Hz profile: 0.01 g²/Hz at the endpoints, ramping at +3 dB/octave up to a 0.04 g²/Hz plateau from 80 to 500 Hz, then rolling off at −3 dB/octave. Thermal cycling ran four cycles from −28 °C to +40 °C (±2 °C) at 3 °C/min with 30-minute dwells. The board passed both, and it passed functional tests through integration and pre-flight.
 
 I shipped the qualified board to USC RPL in March 2026, which closed out my part of the project; integration and flight operations were in their hands from there.
 
-The payload returned no data from the flight. The failure was in firmware; the power hardware worked through pre-flight testing and was not the cause. **[NEEDED: one sentence naming which firmware and where it sat. If the lockout is firmware-resident rather than a comparator, say so directly.]**
+The payload returned no data from the flight. The failure was in firmware — the root cause was never determined on my end, since the board left my hands at the March handoff — but the power hardware worked through pre-flight testing and was not the cause.
 
 The main improvement would be instrumentation. The buffer records nothing about itself, so when the firmware failed downstream, there was no independent record of whether the power system did its job. Logging the bank voltage and lockout state onboard — or even adding a latching brownout supervisor readable on the ground — would have made the board's own performance recoverable without depending on the software that failed.
